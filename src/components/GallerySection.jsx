@@ -16,8 +16,8 @@ export default function GallerySection() {
       <div className="absolute inset-0 w-full h-full">
         <LiquidGlassCarousel 
           items={liquidGlassCarouselDefaultItems}
-          panelHeight={580}
-          gap={22}
+          panelHeight={660}
+          gap={24}
           background="#080b11"
           entry={true}
           autoplay={true}

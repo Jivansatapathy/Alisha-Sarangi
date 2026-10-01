@@ -134,3 +134,21 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: #c9ada7;
 }
+
+/* ========================================================================= */
+/* ULTRA-HIGH FIDELITY IMAGE & MEDIA RENDERING                               */
+/* Prevents downsampling artifacts, blurry GPU scaling, and color compression*/
+/* ========================================================================= */
+img, video {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+img {
+  content-visibility: auto;
+}
+

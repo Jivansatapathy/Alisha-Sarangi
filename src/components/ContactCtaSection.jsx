@@ -12,7 +12,7 @@ import {
 export default function ContactCtaSection() {
   const [copiedKey, setCopiedKey] = useState(null);
 
-  const email = "contact@alishasarangi.com";
+  const email = "alishasarangi1432@gmail.com";
   const phone = "+917853820145";
   const phoneFormatted = "+91 78538 20145";
 
@@ -30,30 +30,12 @@ export default function ContactCtaSection() {
     {
       name: 'Instagram',
       href: 'https://instagram.com/the__leeeesu',
+      handle: '@the__leeeesu',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
           <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-        </svg>
-      )
-    },
-    {
-      name: 'Facebook',
-      href: 'https://facebook.com',
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-        </svg>
-      )
-    },
-    {
-      name: 'YouTube',
-      href: 'https://youtube.com',
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
-          <polygon points="10 15 15 12 10 9 10 15" fill="currentColor"/>
         </svg>
       )
     }
@@ -192,7 +174,7 @@ export default function ContactCtaSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* SIMPLE SOCIAL ICONS ROW (Instagram, Facebook, YouTube)                    */}
+        {/* SIMPLE SOCIAL ICONS ROW (Instagram)                                       */}
         {/* ========================================================================= */}
         <div className="mb-20 text-center">
           <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-[#a19fa9] block mb-6">
@@ -229,17 +211,17 @@ export default function ContactCtaSection() {
         <footer className="pt-10 border-t border-[#182030] flex flex-col items-center text-center space-y-8">
           
           {/* Brand Signature */}
-          <div className="w-full flex justify-between items-center">
+          <div className="w-full relative flex items-center justify-center">
             <a 
               href="#home" 
-              className="text-2xl sm:text-3xl font-serif tracking-[0.25em] uppercase text-[#f4efea] hover:text-[#c9ada7] transition-colors"
+              className="text-2xl sm:text-3xl lg:text-4xl font-serif tracking-[0.25em] uppercase text-[#f4efea] hover:text-[#c9ada7] transition-colors text-center pl-10 sm:pl-0"
             >
               ALISHA SARANGI
             </a>
 
             <button
               onClick={scrollToTop}
-              className="w-10 h-10 rounded-full bg-[#121622] hover:bg-[#c9ada7] text-[#f4efea] hover:text-[#09090b] border border-[#223048] hover:border-[#c9ada7] flex items-center justify-center transition-all cursor-pointer shadow-lg hover:scale-105"
+              className="absolute right-0 w-10 h-10 rounded-full bg-[#121622] hover:bg-[#c9ada7] text-[#f4efea] hover:text-[#09090b] border border-[#223048] hover:border-[#c9ada7] flex items-center justify-center transition-all cursor-pointer shadow-lg hover:scale-105"
               title="Back to Top"
               aria-label="Back to top"
             >
@@ -251,9 +233,9 @@ export default function ContactCtaSection() {
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs uppercase tracking-[0.2em] font-mono text-[#a19fa9]">
             <a href="#about" className="hover:text-[#f4efea] transition-colors">About</a>
             <a href="#attributes" className="hover:text-[#f4efea] transition-colors">Attributes</a>
-            <a href="#gallery" className="hover:text-[#f4efea] transition-colors">Liquid Gallery</a>
-            <a href="#slideshow" className="hover:text-[#f4efea] transition-colors">Slideshow</a>
+            <a href="#slideshow" className="hover:text-[#f4efea] transition-colors">Lookbook</a>
             <a href="#filmography" className="hover:text-[#f4efea] transition-colors">Films</a>
+            <a href="#reels" className="hover:text-[#f4efea] transition-colors">Reels</a>
             <a href="#showreel" className="hover:text-[#f4efea] transition-colors">Showreel</a>
             <a href="#contact" className="hover:text-[#c9ada7] transition-colors">Contact</a>
           </div>

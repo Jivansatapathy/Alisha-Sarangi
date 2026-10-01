@@ -33,8 +33,8 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "Fall / Winter 2026",
       location: "Paris, France",
       photographer: "Jean-Luc Dubois",
-      image: "/model-hero.jpg",
-      spanClass: "col-span-12 lg:col-span-5 row-span-2 aspect-[4/5] lg:aspect-auto"
+      image: "/images/alisha-about-portrait.jpg",
+      spanClass: "col-span-12 sm:col-span-6 lg:col-span-4 aspect-[3/4]"
     },
     {
       id: 'h2',
@@ -44,8 +44,8 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "Spring 2026",
       location: "New York, USA",
       photographer: "Helena Vance",
-      image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80",
-      spanClass: "col-span-12 sm:col-span-8 lg:col-span-4 aspect-[16/9]"
+      image: "/images/Picsart_26-04-09_14-07-49-049.jpg.jpeg",
+      spanClass: "col-span-12 sm:col-span-6 lg:col-span-4 aspect-[3/4]"
     },
     {
       id: 'h3',
@@ -55,8 +55,8 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "Spring / Summer 2026",
       location: "Paris, France",
       photographer: "Marco Rossi",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-      spanClass: "col-span-12 sm:col-span-4 lg:col-span-3 row-span-2 aspect-[3/4] lg:aspect-auto"
+      image: "/images/Picsart_26-04-10_14-55-41-252.jpg.jpeg",
+      spanClass: "col-span-12 sm:col-span-6 lg:col-span-4 aspect-[3/4]"
     },
     {
       id: 'h4',
@@ -66,8 +66,8 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "Winter 2025/26",
       location: "Milan, Italy",
       photographer: "Sofia Alessi",
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
-      spanClass: "col-span-6 sm:col-span-4 lg:col-span-2 aspect-square"
+      image: "/images/Picsart_26-04-10_15-44-29-698.jpg.jpeg",
+      spanClass: "col-span-6 sm:col-span-6 lg:col-span-6 aspect-[4/5] sm:aspect-[3/4]"
     },
     {
       id: 'h5',
@@ -77,8 +77,8 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "Spring 2026",
       location: "London, UK",
       photographer: "Arthur Pendelton",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
-      spanClass: "col-span-6 sm:col-span-4 lg:col-span-2 aspect-square"
+      image: "/images/Picsart_26-04-11_15-34-54-313.jpg.jpeg",
+      spanClass: "col-span-6 sm:col-span-6 lg:col-span-6 aspect-[4/5] sm:aspect-[3/4]"
     }
   ];
 
@@ -92,7 +92,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Paris Studio",
       photographer: "Jean-Luc Dubois",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-05-05_14-44-52-097.jpg.jpeg"
     },
     {
       id: 'p2',
@@ -102,7 +102,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Milan Runway",
       photographer: "Sofia Alessi",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-05-15_18-57-58-330.jpg.jpeg"
     },
     {
       id: 'p3',
@@ -112,7 +112,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "FW '26",
       location: "London Set",
       photographer: "Arthur Pendelton",
-      image: "/model-hero.jpg"
+      image: "/images/Picsart_26-05-16_18-36-33-866.jpg.jpeg"
     },
     {
       id: 'p4',
@@ -122,7 +122,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "New York",
       photographer: "Helena Vance",
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-05-24_16-36-05-886.jpg.jpeg"
     },
     {
       id: 'p5',
@@ -132,7 +132,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Paris Fashion Week",
       photographer: "Marco Rossi",
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-06-12_01-19-49-258.png"
     },
     {
       id: 'p6',
@@ -142,7 +142,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Milan",
       photographer: "Sofia Alessi",
-      image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-07-11_21-02-48-535.jpg.jpeg"
     },
     {
       id: 'p7',
@@ -152,7 +152,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Paris Atelier",
       photographer: "Jean-Luc Dubois",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-09-20_09-30-54-439.png"
     },
     {
       id: 'p8',
@@ -162,7 +162,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Paris Grand Palais",
       photographer: "Marco Rossi",
-      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-09-24_16-40-04-328.png"
     },
     {
       id: 'p9',
@@ -172,7 +172,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "New York Studio",
       photographer: "Helena Vance",
-      image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+      image: "/images/Picsart_26-09-24_17-12-59-882.jpg.jpeg"
     },
     {
       id: 'p10',
@@ -182,7 +182,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
       season: "SS '26",
       location: "Milan Fashion Week",
       photographer: "Sofia Alessi",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80"
+      image: "/images/IMG-20260603-WA0030.jpg.jpeg"
     }
   ];
 
@@ -290,7 +290,7 @@ export default function PortfolioSection({ onInquireClick = null }) {
               <div
                 key={item.id}
                 onClick={() => setSelectedPhoto(item)}
-                className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer border border-[#1e2738] hover:border-[#c9ada7] transition-all duration-700 bg-[#0c101a] shadow-lg hover:shadow-[0_16px_40px_rgba(201,173,167,0.25)] hover:-translate-y-1"
+                className="group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer border border-[#1e2738] hover:border-[#c9ada7] transition-all duration-700 bg-[#0c101a] shadow-lg hover:shadow-[0_16px_40px_rgba(201,173,167,0.25)] hover:-translate-y-1"
               >
                 {/* Photo Image with B&W to Color Light-Up Hover Effect — 100% CLEAN */}
                 <img

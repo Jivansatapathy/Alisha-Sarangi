@@ -35,26 +35,43 @@ export default function ShowreelSection() {
       id="showreel" 
       className="relative w-full h-screen min-h-screen bg-black overflow-hidden select-none z-20"
     >
-      {/* 100% Full-Viewport Video */}
+      {/* Ambient Blurred Background Video to fill wide screens */}
       <video
-        ref={videoRef}
         autoPlay
         loop
-        muted={isMuted}
+        muted
         playsInline
-        className="w-full h-full object-cover filter contrast-[1.06] brightness-[0.96]"
-        poster="/model-hero.jpg"
+        className="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-35 scale-110 pointer-events-none"
+        aria-hidden="true"
       >
         <source 
-          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" 
+          src="/images/VID_20260527_061035_166.mp4" 
           type="video/mp4" 
         />
-        Your browser does not support the video tag.
       </video>
 
+      {/* 100% Crisp Full-Frame Centered Video (Zero Cropping) */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center p-4 sm:p-8">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted={isMuted}
+          playsInline
+          className="max-h-[92vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-[0_25px_80px_rgba(0,0,0,0.9)] border border-white/10"
+          poster="/images/alisha-about-portrait.jpg"
+        >
+          <source 
+            src="/images/VID_20260527_061035_166.mp4" 
+            type="video/mp4" 
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       {/* Subtle top & bottom edge gradients for seamless transition to surrounding sections */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#09090b] via-[#09090b]/40 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#09090b] via-[#09090b]/40 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#09090b] via-[#09090b]/40 to-transparent pointer-events-none z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#09090b] via-[#09090b]/40 to-transparent pointer-events-none z-20" />
 
       {/* Minimal Floating Audio & Playback Controls (Discrete in bottom-right corner) */}
       <div className="absolute bottom-8 right-8 z-30 flex items-center space-x-3 opacity-60 hover:opacity-100 transition-opacity duration-300">

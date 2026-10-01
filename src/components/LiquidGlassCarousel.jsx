@@ -13,47 +13,47 @@ import {
   WebGLFallback,
 } from "./ui/liquid-glass-carousel-utils/webgl-error-boundary";
 
-const PORTRAIT_ASPECT = 3 / 4;
+const PORTRAIT_ASPECT = 0.68; // 2:3 High-Fashion Vertical Portrait Proportion
 
 export const liquidGlassCarouselDefaultItems = [
   {
     title: "Vogue Paris — 'L'Élégance Pure'",
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-04-09_14-07-49-049.jpg.jpeg",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Chanel Haute Couture — Grand Palais",
-    src: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-04-10_14-55-41-252.jpg.jpeg",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Harper's Bazaar — 'Nocturne Noir'",
-    src: "/model-hero.jpg",
+    src: "/images/alisha-about-portrait.jpg",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Saint Laurent — Rive Gauche Campaign",
-    src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-04-10_15-44-29-698.jpg.jpeg",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Prada Milano — Studio Noir Manifesto",
-    src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-05-05_14-44-52-097.jpg.jpeg",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Céline — Architectural Line & Form",
-    src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-05-24_16-36-05-886.jpg.jpeg",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Vogue Italia — 'L'Éclat du Soleil'",
-    src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-09-24_16-40-04-328.png",
     aspect: PORTRAIT_ASPECT,
   },
   {
     title: "Givenchy — Haute Couture Atelier",
-    src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=85",
+    src: "/images/Picsart_26-07-11_21-02-48-535.jpg.jpeg",
     aspect: PORTRAIT_ASPECT,
   },
 ];
@@ -315,7 +315,7 @@ function createCarousel(
   let W = getContainerW();
   let H = getContainerH();
   const panelHFor = () =>
-    Math.max(260, Math.min(options.panelHeight, Math.round(H * 0.65)));
+    Math.max(300, Math.min(options.panelHeight || 660, Math.round(H * 0.74)));
   let PANEL_H = panelHFor();
   const GAP = options.gap;
   const EASE = 0.09;
@@ -338,7 +338,7 @@ function createCarousel(
     return null;
   }
 
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
   renderer.setPixelRatio(dpr);
   renderer.setSize(W, H);
   renderer.setClearColor(hexToNumber(options.background), 1);
@@ -374,10 +374,14 @@ function createCarousel(
     loader.load(
       img.src,
       (tex) => {
-        tex.minFilter = THREE.LinearFilter;
+        tex.generateMipmaps = true;
+        tex.minFilter = THREE.LinearMipmapLinearFilter;
         tex.magFilter = THREE.LinearFilter;
-        tex.generateMipmaps = false;
+        if (renderer && renderer.capabilities) {
+          tex.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 16);
+        }
         tex.colorSpace = THREE.SRGBColorSpace;
+        tex.needsUpdate = true;
         if (!s.locked && tex.image && tex.image.width && tex.image.height) {
           s.aspect = tex.image.width / tex.image.height;
         }

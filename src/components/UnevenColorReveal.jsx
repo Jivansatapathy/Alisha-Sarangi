@@ -116,16 +116,18 @@ export default function UnevenColorReveal({
     let time = 0;
 
     const handleResize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
       const width = canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth;
       const height = canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight;
 
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
 
       ctx.scale(dpr, dpr);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
     };
 
     handleResize();
@@ -134,9 +136,13 @@ export default function UnevenColorReveal({
     // Render loop
     const render = () => {
       time += 0.024;
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
       const width = canvas.width / dpr;
       const height = canvas.height / dpr;
+
+      // Ensure crisp bicubic interpolation
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
 
       // Clear Canvas
       ctx.clearRect(0, 0, width, height);
