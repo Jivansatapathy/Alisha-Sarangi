@@ -17,7 +17,7 @@ export default function EditorialSlideshowSection() {
   const [isPaused, setIsPaused] = useState(false);
   const [cardWidth, setCardWidth] = useState(380);
 
-  // 13 Curated local photoshoot assets (removed slides 05, 09, 10)
+  // 12 Curated local photoshoot assets (removed slides 05, 07, 09, 10)
   const slides = [
     { id: 1, image: "/images/Picsart_26-09-24_16-40-04-328.png", alt: "Alisha Sarangi Haute Couture" },
     { id: 2, image: "/images/Picsart_26-04-09_14-07-49-049.jpg.jpeg", alt: "Alisha Sarangi Noir Portrait" },
@@ -25,13 +25,12 @@ export default function EditorialSlideshowSection() {
     { id: 4, image: "/images/Picsart_26-05-05_14-44-52-097.jpg.jpeg", alt: "Alisha Sarangi Runway" },
     { id: 5, image: "/images/Picsart_26-04-10_15-44-29-698.jpg.jpeg", alt: "Alisha Sarangi Sunlight Series" },
     { id: 6, image: "/images/Picsart_26-09-24_17-12-59-882.jpg.jpeg", alt: "Alisha Sarangi Motion Flow" },
-    { id: 7, image: "/images/Picsart_26-05-24_16-36-05-886.jpg.jpeg", alt: "Alisha Sarangi Monochromatic" },
-    { id: 8, image: "/images/Picsart_26-04-10_23-53-43-024.jpg.jpeg", alt: "Alisha Sarangi Velvet Series" },
-    { id: 9, image: "/images/Picsart_26-04-11_15-34-54-313.jpg.jpeg", alt: "Alisha Sarangi Street Fashion" },
-    { id: 10, image: "/images/Picsart_26-05-15_18-57-58-330.jpg.jpeg", alt: "Alisha Sarangi Film Expressions" },
-    { id: 11, image: "/images/Picsart_26-05-16_18-36-33-866.jpg.jpeg", alt: "Alisha Sarangi Dusk Atmosphere" },
-    { id: 12, image: "/images/Picsart_26-06-12_01-19-49-258.png", alt: "Alisha Sarangi Architectural Look" },
-    { id: 13, image: "/images/Picsart_26-10-01_23-03-01-954.jpg.jpeg", alt: "Alisha Sarangi SHEFORMAL Look" }
+    { id: 7, image: "/images/Picsart_26-04-10_23-53-43-024.jpg.jpeg", alt: "Alisha Sarangi Velvet Series" },
+    { id: 8, image: "/images/Picsart_26-04-11_15-34-54-313.jpg.jpeg", alt: "Alisha Sarangi Street Fashion" },
+    { id: 9, image: "/images/Picsart_26-05-15_18-57-58-330.jpg.jpeg", alt: "Alisha Sarangi Film Expressions" },
+    { id: 10, image: "/images/Picsart_26-05-16_18-36-33-866.jpg.jpeg", alt: "Alisha Sarangi Dusk Atmosphere" },
+    { id: 11, image: "/images/Picsart_26-06-12_01-19-49-258.png", alt: "Alisha Sarangi Architectural Look" },
+    { id: 12, image: "/images/Picsart_26-10-01_23-03-01-954.jpg.jpeg", alt: "Alisha Sarangi SHEFORMAL Look" }
   ];
 
   // Responsive card width calculation
